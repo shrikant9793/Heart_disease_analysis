@@ -1,6 +1,6 @@
 import sys
 
-from heart_disease_project.exception import USvisaException
+from heart_disease_project.exception import heart_disease_projectException
 from heart_disease_project.logger import logging
 
 import os
@@ -32,4 +32,4 @@ class MongoDBClient:
             self.database_name = database_name
             logging.info("MongoDB connection succesfull")
         except Exception as e:
-            raise USvisaException(e,sys)
+            raise heart_disease_projectException(e,sys)
